@@ -75,7 +75,7 @@
 	// Banner 
 	
     $('.heading').height( $(window).height() );
-	$('.parallaxie').parallaxie();
+	// $('.parallaxie').parallaxie();
 	
     // LOADER
     $(window).load(function() {
