@@ -1,0 +1,75 @@
+<% layout('layouts/project/boilerplate')%>
+
+
+
+
+<div class="wrapper">
+
+    <div class="loginContainer">
+      <h1>Register</h1>
+      <% if(payload.error){%>
+          <h3><%=payload.error%></h3>
+      <%}%>
+
+
+        <form method="POST" class="validated-form" novalidate>
+
+          <div class="mb-3">
+              <label class="form-label" for="firstName">Firstname</label>
+              <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First name" value= "<%=payload.firstName%>" required/>
+              <div class="valid-feedback">
+                  Looks good!
+              </div>
+          </div>
+
+
+          <div class="mb-3">
+            <label class="form-label" for="lastName">Lastname</label>
+            <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last name" value= "<%=payload.lastName%>" required/>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+          </div>
+
+
+          <div class="mb-3">
+            <label class="form-label" for="username">Username</label>
+            <input type="text" class="form-control" name="username" id="username" placeholder="Username" value= "<%=payload.username%>" required/>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+          </div>
+
+
+
+          <div class="mb-3">
+              <label class="form-label" for="email">Email</label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="Email" value= "<%=payload.email%>" required/>
+              <div class="valid-feedback">
+                  Looks good!
+              </div>
+          </div>
+
+
+
+          <div class="mb-3">
+              <label class="form-label" for="password">Password</label>
+              <input id="password"  type="password" class="form-control" id="password" name="password" placeholder="Password" value= "<%=payload.password%>" required/>
+              <div class="valid-feedback">
+                  Looks good!
+              </div>
+          </div>
+          <button class="btn btn-success">Register</button>
+        </form>
+
+
+
+    </div>
+
+    
+
+</div>
+
+
+
+

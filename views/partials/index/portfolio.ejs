@@ -1,0 +1,31 @@
+<div id="portfolio" class="section lb">
+    <div class="container">
+        <div class="section-title text-left">
+            <h3>Portfolio</h3>
+            <h4>Projects / Certifications / Works / Skills</h4>
+            <br>
+            <p><i>*Clicking on the icon will take you to the other page where more details about the particular topic. You may need to manually get back to this page as not all links contains back navigation*</i></p>
+        </div>
+        
+        <div class="gallery-menu row">
+            <div class="col-md-12">
+                <div class="button-group filter-button-group text-center">
+                    <button class="active" data-filter="*">All</button>
+                    <button  data-filter=".gal_top">Top Selected</button>
+                    <button data-filter=".gal_a">Projects</button>
+                    <button id="certificateButton" data-filter=".gal_b">Certifications</button>
+                    <button data-filter=".gal_c">Work</button>
+                    <button data-filter=".gal_e">Others</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="boxesHere" class="gallery-list row">
+
+            <%- include("./projects/project.ejs")%>
+            <%- include("./certifications/certification.ejs")%>
+
+        
+        </div>
+    </div>
+</div>

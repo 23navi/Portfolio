@@ -1,0 +1,27 @@
+<% layout('layouts/project/boilerplate')%>
+
+<h1>Login</h1>
+<form action="/login" method="POST" class="validated-form" novalidate>
+    <div class="mb-3">
+        <label class="form-label" for="username">Username or Email</label>
+        <input type="text" class="form-control" name="username" id="username" placeholder="Username or email" value="<%=payload.username%>" required/>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" for="password">Password</label>
+        <input type="password" class="form-control" name="password" id="password" value="<%= payload.password%>" placeholder="Password" required />
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <button class="btn btn-success">Login</button>
+</form>
+
+
+
+
+
+
