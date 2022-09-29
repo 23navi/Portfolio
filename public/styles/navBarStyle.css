@@ -27,7 +27,18 @@ html{
 
 .logo {
     z-index: 2;
-    align-self: center;
+    align-self: left;
+    padding-left: 1em;
+    padding-top: 1em;
+    width:300px;
+}
+
+
+
+
+.logo3 {
+    z-index: 2;
+    align-self: left;
     padding-left: 1em;
     padding-top: 1em;
     width:300px;

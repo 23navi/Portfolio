@@ -17,42 +17,6 @@
 
     <script>
    
-        function setupElements() {
-            let hamburgerClicked = false;
-            var element = select('button');
-            element.touchStarted(clickedHamburger);
-            element = select("body");
-            element.touchStarted(clickedBody);
-        }
-
-
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        clickedBody = function (e) {
-            if (!hamburgerClicked && windowWidth < 700) {
-                var menuItems = document.getElementsByClassName("menuItems");
-                menuItems[0].style.display = "none";
-            }
-            hamburgerClicked = true;
-        };
-
-        function clickedHamburger() {
-            var menuItems = document.getElementsByClassName("menuItems");
-            if (menuItems[0].style.display === "grid")
-                return;
-            menuItems[0].style.display = "grid";
-            hamburgerClicked = true;
-        }
-
-        function onResize() {
-            var menuItems = document.getElementsByClassName("menuItems");
-            if (windowWidth > 700 && menuItems[0].style.display === "none") {
-
-                menuItems[0].style.display = "grid";
-            }
-        }
 
 
     </script>
@@ -67,28 +31,14 @@
                 <img src="/images/white-black.png" alt="naviLogo">
             </a>
         </div>
-    
-        <div class="menuItems">
-    
-            <div >
-                <a href=""></a>
-            </div>
-            <div class="active">
-                <a href="">Home</a>
-            </div>
-            <div>
-                <a href="/allProjects">Projects</a>
-            </div>
-            
-            <div>
-                <a href="/resume">Resume</a>
-    
-            </div>
-    
+
+        <div class="logo3">
+            <a href="/allProjects">
+                <img src="/images/all.png" alt="naviLogo">
+            </a>
         </div>
-        <button class="hamburgerButton" onclick=clickedHamburger>
-            <i class="fa fa-bars" style="font-size:24px;color:white"></i>
-        </button>
+    
+        
     
         
     </div>
