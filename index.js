@@ -35,7 +35,7 @@ app.use(express.json());
 
 
 const store = MongoStore.create({
-    mongoUrl: "mongodb://127.0.0.1:27017/",
+    mongoUrl: "mongodb+srv://navi:Navi2308@portfoliotest.ihv5hjx.mongodb.net/",
     // touchAfter: 24 * 60 * 60,
     crypto: {
         secret: 'squirrel'
