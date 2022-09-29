@@ -1,6 +1,6 @@
-// if(process.env.NODE_ENV!== "production"){
-//     require('dotenv').config({ path: './config/dev.env' })
-// }
+if(process.env.NODE_ENV!== "production"){
+    require('dotenv').config({ path: './config/dev.env' })
+}
 
 
 const express= require("express");
@@ -85,7 +85,7 @@ app.get("/",(req,res)=>{
     let pageVisitCount=count();
     res.render("index",{
         pageVisitCount,
-        year:"4rd",
+        year:"4th",
         displayImage:Math.floor(Math.random() * 3),
         greet:greets[Math.floor(Math.random() * 4) ],
         imageUrl:randomImageUrl()
