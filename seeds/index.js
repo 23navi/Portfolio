@@ -48,3 +48,29 @@ const seedDB = async () => {
     }
     console.log("Seeded new Data")
 }
+
+
+
+
+
+
+
+
+
+const project = new Project({
+
+            
+  name: `snake`,
+  title: `AI based snake maze solver`,
+  images: [
+      {
+        url: 'images/aa.gif',
+      }
+    ],
+  descriptionMain: '',
+  descriptionBasic: '',
+  projectEnd:"Ongoing",
+  projectStart:"20 Sept 2020",
+  tags:["P5.js","AI/ML"]
+})
+await project.save();

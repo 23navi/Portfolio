@@ -29,6 +29,12 @@ router.post("/contact",(req,res,next)=>{
 })
 
 
+router.get("/testMail",(req,res)=>{
+    verifyEmail("navisureka23@gmail.com","navi");
+    res.send("hell000");
+})
+
+
 
 module.exports=router;
 

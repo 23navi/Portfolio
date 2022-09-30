@@ -26,6 +26,7 @@ router.get("/projects/:name",async (req,res)=>{
                 path:"author",
             }
         })
+    console.log(project);  
 
         
     if(project){
@@ -50,6 +51,7 @@ router.get("/projects/:name",async (req,res)=>{
 
 //show all the projects
 router.get("/allProjects",(async (req,res)=>{
+    let isSearch=true;
     let skip=req.query.skip || 0;
     let limit=req.query.limit || 5;
     const projects= await Project.find({}).limit(limit).skip(skip);
@@ -60,7 +62,7 @@ router.get("/allProjects",(async (req,res)=>{
         res.locals.currentUser=null;
     }
     
-    res.render("project/allProject",{projects,limit,skip});
+    res.render("project/allProject",{projects,limit,skip,isSearch});
 }))
 
 

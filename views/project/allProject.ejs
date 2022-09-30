@@ -1,15 +1,35 @@
 <% layout('layouts/project/boilerplate')%>
 
 <h1>All projects</h1>
+<div><br></div>
+
+<!-- <div class="col-sm-3 col-md-3 search-header">
+    <form class="navbar-form" role="search">
+        <div class="input-group">
+            <input type="text" class="form-control search-box " placeholder="Search" name="srch-term" id="srch-term">
+            <div class="input-group-btn">
+                <button class="btn btn-default btn-search" onclick="ss()"></button>
+            </div>
+        </div>
+    </form>
+</div> -->
+
+
+
+
 
 
 <% for (let project of projects){%>
 <div class="card mb-3">
+    
     <div class="row">
-        <div class="col-md-4">
-            
-            <img class="img-fluid" alt="" src="<% if(project.images.length>0) { %><%=(project.images[0].url)%><%}%>">
-        </div>
+        
+           
+            <div class="col-md-4">
+                <img class="img-fluid" alt="" src="<% if(project.images.length>0) { %><%=(project.images[0].url)%><%}%>">
+            </div>
+
+        
         <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title"><%= project.title %> </h5>
@@ -18,9 +38,15 @@
                 <p class="card-text"><%= project.projectEnd%></p>
                 <p class="card-text">
                     <small class="text-muted"><%= project.name%></small>
-                    <small class="text-muted"><%= project.tags%></small>
                 </p>
+                 
                 <a class="btn btn-primary" href="/projects/<%=project.name%>">View <%=project.title%></a>
+            </div>
+            <div class="date">
+                <%for(let tag of project.tags){%>
+                    <span><%= tag%></span>
+                <%}%>
+                
             </div>
         </div>
     </div>
@@ -29,23 +55,29 @@
 
 
 
-<nav aria-label="...">
 
-    <ul class="pagination pagination-lg justify-content-center">
 
-     
 
-        <li class="page-item first  <%=skip==0&&limit==5?"disabled":"byeee"%> ">
-            <a class="page-link first" href="/allProjects">1</a>
-        </li>
+<%if(!isSearch){%>
+    <nav aria-label="...">
 
-        <li class="page-item second <%=skip==5&&limit==5?"disabled":"byeee"%>">
-            <a class="page-link" href="/allProjects?limit=5&skip=5">2</a>
-        </li>
+        <ul class="pagination pagination-lg justify-content-center">
+    
+    
+            <li class="page-item first  <%=skip==0&&limit==5?"disabled":"byeee"%> ">
+                <a class="page-link first" href="/allProjects">1</a>
+            </li>
+    
+            <li class="page-item second <%=skip==5&&limit==5?"disabled":"byeee"%>">
+                <a class="page-link" href="/allProjects?limit=5&skip=5">2</a>
+            </li>
+    
+            <li class="page-item third <%=skip==10&&limit==5?"disabled":"byeee"%>">
+                <a class="page-link third" href="/allProjects?limit=5&skip=10">3</a>
+            </li>
+        </ul>
+    
+      </nav>
 
-        <li class="page-item third <%=skip==10&&limit==5?"disabled":"byeee"%>">
-            <a class="page-link third" href="/allProjects?limit=5&skip=10">3</a>
-        </li>
-    </ul>
 
-  </nav>
+<%}%>
