@@ -16,33 +16,107 @@
    
 
     <script>
+
+        /* Storing user's device details in a variable*/
+        let details = navigator.userAgent;
+  
+        /* Creating a regular expression 
+        containing some mobile devices keywords 
+        to search it in details string*/
+        let regexp = /android|iphone|kindle|ipad/i;
+  
+        /* Using test() method to search regexp in details
+        it returns boolean value*/
+        let isMobileDevice = regexp.test(details);
+  
+        if (isMobileDevice) {
+            setTimeout(()=>{window.location.href = "/allProjects";},10000)
+        } else {
+            console.log("You are using Desktop");
+        }
+
+
+
+
+
+
+
+
    
+        function setupElements() {
+            let hamburgerClicked = false;
+            var element = select('button');
+            element.touchStarted(clickedHamburger);
+            element = select("body");
+            element.touchStarted(clickedBody);
+        }
+
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        clickedBody = function (e) {
+            if (!hamburgerClicked && windowWidth < 700) {
+                var menuItems = document.getElementsByClassName("menuItems");
+                menuItems[0].style.display = "none";
+            }
+            hamburgerClicked = true;
+        };
+
+        function clickedHamburger() {
+            var menuItems = document.getElementsByClassName("menuItems");
+            if (menuItems[0].style.display === "grid")
+                return;
+            menuItems[0].style.display = "grid";
+            hamburgerClicked = true;
+        }
+
+        function onResize() {
+            var menuItems = document.getElementsByClassName("menuItems");
+            if (windowWidth > 700 && menuItems[0].style.display === "none") {
+
+                menuItems[0].style.display = "grid";
+            }
+        }
 
 
     </script>
 
 </head>
 <body>
+<div class="navBar">
 
-    <div class="navBar">
-
-        <div class="logo">
-            <a href="/">
-                <img src="/images/white-black.png" alt="naviLogo">
-            </a>
-        </div>
-
-        <div class="logo3">
-            <a href="/allProjects">
-                <img src="/images/all.png" alt="naviLogo">
-            </a>
-        </div>
-    
-        
-    
-        
+    <div class="logo">
+        <a href="/">
+            <img src="/images/white-black.png" alt="naviLogo">
+        </a>
     </div>
 
+    <div class="menuItems">
+
+        <div >
+            <a href=""></a>
+        </div>
+        <div class="active">
+            <a href="">Home</a>
+        </div>
+        <div>
+            <a href="/allProjects">Projects</a>
+        </div>
+        
+        <div>
+            <a href="/resume">Resume</a>
+
+        </div>
+
+    </div>
+    <button class="hamburgerButton" onclick="">
+        <i class="fa fa-bars" style="font-size:24px;color:white"></i>
+    </button>
+
+    
+</div>
 
 <script language="javascript" type="text/javascript" src="/libraries/p5.js"></script>
 <script language="javascript" src="/libraries/p5.dom.js"></script>
