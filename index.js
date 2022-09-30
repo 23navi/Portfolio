@@ -110,8 +110,12 @@ app.get("/resume",(req,res)=>{
 
 
 app.get("/moreAboutMe",(req,res)=>{
-    // res.render("resume",{});
     res.render("comingSoon",{title:"About me"});
+})
+
+
+app.get("/snake",(req,res)=>{
+    res.render("snake");
 })
 
 
