@@ -17,7 +17,7 @@
 
     
 
-    <div class="col-6">
+    <div class="col-lg-6 col-12">
 
         <div class="card mb-3">
 
@@ -73,7 +73,7 @@
 
     </div>
 
-    <div class="col-6">
+    <div class="col-lg-6 col-12">
         <% if(currentUser){ %>
             <h2>Leave a views and suggesions</h2>
             <form action="/projects/<%=project.name%>/reviews" method="POST" class="mb-3 validated-form" novalidate>
@@ -88,11 +88,13 @@
                 </div>
                 <button class="btn btn-success">Submit</button>
             </form>
-        <% } %>
+        <% }else{ %>
+            <h2>Reviews</h2>
+            <%} %>
         <% for(let review of project.reviews) { %>
             <div class="card mb-3 ">
                 <div class="card-body">
-                    <h5 class="card-title"> <%= review.author.username%></h5>
+                    <h5 class="card-title"> @<%= review.author.username%></h5>
                     
                     <!-- <h6 class="card-subtitle mb-2 text-muted">By <%= review.author.username%></h6> -->
                     <p class="card-text">Review: <%= review.body %></p>
