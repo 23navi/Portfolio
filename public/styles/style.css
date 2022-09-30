@@ -495,9 +495,6 @@ xclip
     background-color: #495057;
 }
 
-.section.thisPage {
-    background-color: #448AFF;
-}
 
 .first-section {
     display: block;
@@ -2508,4 +2505,24 @@ select.mobile-device {
 
 #about{
     background-color: #f8edeb;
+}
+
+
+.aboutSection h3 {
+    letter-spacing: 0;
+    position: relative;
+    padding: 0 0 20px 0;
+    font-weight: bold;
+    line-height: 120% !important;
+    color: white;
+    margin: 0;
+    font-size: 18;
+}
+
+.aboutSection p {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 33px;
+    margin: 0;
 }
