@@ -186,7 +186,7 @@
           $(".alert").remove();
 
           const html= `<div class="alert alert-success alert-dismissible fade show" role="alert">
-                        Hey ${name}.. I will send reply to you as soon as possible. Check you inbox.. I have send you something 
+                        Hey ${name}.. Check your email.
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -200,75 +200,8 @@
           $('#messageData').val("")
 
         }
-  
-        
-
     })
-
-      // $.ajax({
-      //   url:`/contact`,
-      //   type:"POST",
-      //   success:(post)=>{
-      //       console.log(post);
-            
-
-      //       const html= `<div class="alert alert-success alert-dismissible fade show" role="alert">
-      //                       Hey ${first_name}.. I will send reply to you as soon as possible. Check you inbox.. I have send you something 
-      //                       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      //                           <span aria-hidden="true">&times;</span>
-      //                       </button>
-      //                   </div>`;
-
-      //     $("#forPostMessage").prepend(html)
-
-      //   }
-      // })
     });
-
-
-
-
-
-
-
-  //   jQuery(document).ready(function() {
-  //     $('#contactform').submit(function() {
-  //         var action = $(this).attr('action');
-  //         $("#message").slideUp(750, function() {
-  //             $('#message').hide();
-  //             $('#submit')
-  //                 .after('<img src="images/ajax-loader.gif" class="loader" />')
-  //                 .attr('disabled', 'disabled');
-  //             $.post(action, {
-  //                     first_name: $('#first_name').val(),
-  //                     last_name: $('#last_name').val(),
-  //                     email: $('#email').val(),
-  //                     phone: $('#phone').val(),
-  //                 },
-  //                 function(data) {
-  //                     document.getElementById('message').innerHTML = data;
-  //                     $('#message').slideDown('slow');
-  //                     $('#contactform img.loader').fadeOut('slow', function() {
-  //                         $(this).remove()
-  //                     });
-  //                     $('#submit').removeAttr('disabled');
-  //                     if (data.match('success') != null) $('#contactform').slideUp('slow');
-  //                 }
-  //             );
-  //         });
-  //         return false;
-  //     });
-  // });
-
-
-
-
-
-
-
-
-
-
 
 })(jQuery);
 
