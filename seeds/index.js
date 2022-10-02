@@ -260,17 +260,17 @@ const seedDB = async () => {
 // //
 
 // const project7 = new Project({      
-//   name: `cloudseed`,
-//   title: `Cloud Seeding using Rockets`,
+//   name: `quotes`,
+//   title: `An API endpoint which returns random quotes`,
 //   images: [
 //       {
 //         url: 'images/aa.gif',
 //       }
 //     ],
-//   descriptionMain: 'Rocket Science?',
+//   descriptionMain: 'I know it\'s not some high tech project but it was one of the first time I contributed to an open source project and used the same to create this API endpoint. Fun Fact: I have used the same API in my home page to show random quote. And you can too access the API endpoint at thissite/getQuote',
 //   descriptionBasic: '',
 //   projectEnd:"Ongoing",
 //   projectStart:"20 Sept 2020",
-//   tags:["Hardware","PyroChem"]
+//   tags:["Node-API"]
 // })
 // await project7.save();
