@@ -11,13 +11,13 @@ module.exports.isReviewAuthorized = (async(req,res,next)=>{
 
     if(!review){
         req.flash("error","No review with this id");
-        return res.redirect(`/where to ?/${id}`);
+        return res.redirect(`/projects/${name}`);
     }
  
     if(!review.author.equals(req.user._id)){     // req.user._id -> is the current logged in user
         req.flash("error","You are not authorized")
         console.log("or this is?")
-        return res.redirect(`/campgrounds/${id}`);
+        return res.redirect(`/projects/${name}`);
     }
     next();
 })

@@ -15,6 +15,7 @@ require("./src/allProjects/db/mongoose");
 const session= require("express-session");
 const MongoStore=require("connect-mongo");
 const flash = require("connect-flash");
+var methodOverride = require('method-override')
 
 const app=express();
 
@@ -30,6 +31,7 @@ app.set('views',viewPath)
 app.use(express.static(publicDirectoryPath))
 app.engine('ejs', ejsMate);
 app.use(express.json());
+app.use(methodOverride('_method'))
 
 
 
