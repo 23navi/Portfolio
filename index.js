@@ -119,19 +119,6 @@ app.get("/snake",(req,res)=>{
 })
 
 
-
-app.post("/valid",(req,res)=>{
-    console.log(req.body);
-    if(req.body.username=="navi") return res.send(false);
-    res.send(true);
-})
-
-app.get("/test",(req,res)=>{
-    res.render("s");
-})
-
-
-
 app.get("*",(req,res)=>{
     res.render("notFound",{route:originalPath})
 })
