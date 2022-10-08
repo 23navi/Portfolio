@@ -29,7 +29,7 @@ const seedDB = async () => {
       title: `AI based snake maze solver`,
       images: [
           {
-            url: '/images/aa.gif',
+            url: '/images/projects/snake.gif',
           }
         ],
       descriptionMain: '',
@@ -48,7 +48,7 @@ const seedDB = async () => {
       title: `Visualization of popular DSA Algos`,
       images: [
           {
-            url: '/images/aa.gif',
+            url: '/images/projects/snake.gif',
           }
         ],
       descriptionMain: 'Includes spanning tree using prims algo, ',
@@ -68,7 +68,7 @@ const seedDB = async () => {
       title: `Weather forcasting app using API`,
       images: [
           {
-            url: '/images/aa.gif',
+            url: '/images/projects/snake.gif',
           }
         ],
       descriptionMain: 'The most common node.js starter project. It\'s lile a Hello World program for node.js :)',
@@ -86,7 +86,7 @@ const seedDB = async () => {
       title: `VIT bus service system`,
       images: [
           {
-            url: '/images/aa.gif',
+            url: '/images/projects/snake.gif',
           }
         ],
       descriptionMain: 'Created a mobile application which can track the bus and also manage offline payments for bus in VIT using RFID running on Arduino',
@@ -104,7 +104,7 @@ const seedDB = async () => {
       title: `Synt Information Classifier`,
       images: [
           {
-            url: '/images/aa.gif',
+            url: '/images/projects/snake.gif',
           }
         ],
       descriptionMain: 'A application which can auto scan your news and classify them',
@@ -122,7 +122,7 @@ const seedDB = async () => {
       title: `Cloud Seeding using Rockets`,
       images: [
           {
-            url: '/images/aa.gif',
+            url: '/images/projects/snake.gif',
           }
         ],
       descriptionMain: 'Rocket Science?',
@@ -151,7 +151,7 @@ const seedDB = async () => {
 //   title: `AI based snake maze solver`,
 //   images: [
 //       {
-//         url: 'images/aa.gif',
+//         url: 'images/snake.gif',
 //       }
 //     ],
 //   descriptionMain: '',
@@ -170,7 +170,7 @@ const seedDB = async () => {
 //   title: `Visualization of popular DSA Algos`,
 //   images: [
 //       {
-//         url: 'images/aa.gif',
+//         url: 'images/snake.gif',
 //       }
 //     ],
 //   descriptionMain: 'Includes spanning tree using prims algo, ',
@@ -190,7 +190,7 @@ const seedDB = async () => {
 //   title: `Weather forcasting app using API`,
 //   images: [
 //       {
-//         url: 'images/aa.gif',
+//         url: 'images/snake.gif',
 //       }
 //     ],
 //   descriptionMain: 'The most common node.js starter project. It\'s lile a Hello World program for node.js :)',
@@ -208,7 +208,7 @@ const seedDB = async () => {
 //   title: `VIT bus service system`,
 //   images: [
 //       {
-//         url: 'images/aa.gif',
+//         url: 'images/snake.gif',
 //       }
 //     ],
 //   descriptionMain: 'Created a mobile application which can track the bus and also manage offline payments for bus in VIT using RFID running on Arduino',
@@ -226,7 +226,7 @@ const seedDB = async () => {
 //   title: `Synt Information Classifier`,
 //   images: [
 //       {
-//         url: 'images/aa.gif',
+//         url: 'images/snake.gif',
 //       }
 //     ],
 //   descriptionMain: 'A application which can auto scan your news and classify them',
@@ -244,7 +244,7 @@ const seedDB = async () => {
 //   title: `Cloud Seeding using Rockets`,
 //   images: [
 //       {
-//         url: 'images/aa.gif',
+//         url: 'images/snake.gif',
 //       }
 //     ],
 //   descriptionMain: 'Rocket Science?',
@@ -264,7 +264,7 @@ const seedDB = async () => {
 //   title: `An API endpoint which returns random quotes`,
 //   images: [
 //       {
-//         url: 'images/aa.gif',
+//         url: 'images/snake.gif',
 //       }
 //     ],
 //   descriptionMain: 'I know it\'s not some high tech project but it was one of the first time I contributed to an open source project and used the same to create this API endpoint. Fun Fact: I have used the same API in my home page to show random quote. And you can too access the API endpoint at thissite/getQuote',
