@@ -1,9 +1,9 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
+name: Feature suggestions
+about: Suggest an idea for this portfolio project
 title: ''
-labels: ''
-assignees: ''
+labels: enhancement
+assignees: 23navi
 
 ---
 
