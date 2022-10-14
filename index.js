@@ -96,6 +96,11 @@ app.get("/",(req,res)=>{
 
 
 
+app.get('/mysongs', (req, res) => {
+    res.sendFile(`${publicDirectoryPath}/musicPlayer/index.html`);
+  });
+
+
 
 
 
