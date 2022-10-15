@@ -6,12 +6,18 @@
     IMPORT FILES
 -------------------------------------------------------------------*/
 
-@import url(css/animate.css);
-@import url(css/camera.css);
-@import url(css/flaticon.css);
-@import url(css/prettyPhoto.css);
-@import url(css/owl.carousel.css);
-@import url(css/font-awesome.min.css);
+
+
+/* @import url(css/animate.css); */
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/Camera/1.3.4/scripts/camera.min.js");
+
+@import url(css/camera.css); */
+/* @import url(css/flaticon.css); */
+/* @import url(css/prettyPhoto.css); */
+/* @import url(css/owl.carousel.css); */
+/* @import url(css/font-awesome.min.css); */
+
+
 
 /*------------------------------------------------------------------
     SKELETON
@@ -297,9 +303,6 @@ a img.aligncenter {
     HEADER
 -------------------------------------------------------------------*/
 
-.navbar-dark{
-	
-}
 
 .navbar-dark .navbar-nav .nav-link{
 	color: #f1f1f1;
