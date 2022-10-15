@@ -17,6 +17,12 @@ const MongoStore=require("connect-mongo");
 const flash = require("connect-flash");
 var methodOverride = require('method-override')
 
+
+const cluster= require("cluster")
+const os= require("os")
+
+
+
 const app=express();
 
 const PORT=process.env.PORT||3000;
@@ -134,10 +140,17 @@ app.get("*",(req,res)=>{
 })
 
 
-app.listen(PORT,()=>{
-    console.log("Server up and running on port "+PORT);
-
-})
-
+if(cluster.isMaster){
+    console.log("Master started with Pid of master: "+process.pid)
+    const num_of_cpus= os.cpus().length
+    for(let i=0;i<num_of_cpus;i++){
+      cluster.fork();
+    }
+  }else{
+    console.log("worker started with pid: "+process.pid);
+    app.listen(PORT,()=>{
+        console.log("listning to port "+ PORT)
+    });
+  }
 
 
