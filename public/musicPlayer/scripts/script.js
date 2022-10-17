@@ -250,6 +250,15 @@ new Vue({
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
         },
+
+        {
+          name: "You are my Soniya",
+          artist: "Sonu Nigam",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1666002539/portfolio/myMusic/music%20pics%20/you_are_my_soniya..._sonu_nigam_t0qnvw.png",
+          source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1666002519/portfolio/myMusic/songs/y2mate.com_-_You_Are_My_Soniya_Full_Video_K3GKareena_Kapoor_Hrithik_RoshanSonu_Nigam_Alka_Yagnik_q2pwup.mp3",
+          url: "https://youtu.be/BcqxLCWn-CE",
+          favorited: false
+        },
       ],
 
       currentTrack: null,
