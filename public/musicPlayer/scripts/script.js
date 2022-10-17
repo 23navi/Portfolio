@@ -28,7 +28,7 @@ new Vue({
         {
           name: "Duniya ",
           artist: "Akhil",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742194/portfolio/myMusic/music%20pics%20/akhil_duniya_augg9e.png",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1666000117/portfolio/myMusic/music%20pics%20/akhil_duniya_uho1ip.jpg",
           source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742343/portfolio/myMusic/songs/Y2Mate.is_-_Luka_Chuppi_Duniyaa_Full_Video_Song_Kartik_Aaryan_Kriti_Sanon_Akhil_Dhvani_B-hVCYwwFwGEE-128k-1655844323955_tns5vk.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
@@ -37,7 +37,7 @@ new Vue({
         {
           name: "Without you - Disc ",
           artist: "Mary Cicilia",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742210/portfolio/myMusic/music%20pics%20/mary_cicillia_discrete_without_you_bcccmn.png",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1666001262/portfolio/myMusic/music%20pics%20/mary_cicillia_discrete_without_you_svxsdx.jpg",
           source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742513/portfolio/myMusic/songs/Y2Mate.is_-_Discrete_-_WITHOUT_YOU._Lyrics_ft._Mary_Cicilia-VHoNccUj5sY-128k-1655844124468_hjos8z.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
@@ -68,7 +68,7 @@ new Vue({
         {
           name: "Dance monkey ",
           artist: "Tones and I",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742215/portfolio/myMusic/music%20pics%20/tones_and_I_dance_monkey_cxmkib.png",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1666001263/portfolio/myMusic/music%20pics%20/tones_and_I_dance_monkey_ktanoh.jpg",
           source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742478/portfolio/myMusic/songs/Y2Mate.is_-_Tones_and_I_-_Dance_Monkey-p_-SscksAf4-128k-1655844809214_jmcfqm.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
@@ -79,7 +79,7 @@ new Vue({
         {
           name: "Without you",
           artist: "The Kid LAROI",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742202/portfolio/myMusic/music%20pics%20/kid_Laroi_without_you_obslv0.png",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1666001261/portfolio/myMusic/music%20pics%20/kid_Laroi_without_you_ps74zj.jpg",
           source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742460/portfolio/myMusic/songs/Y2Mate.is_-_The_Kid_LAROI_-_WITHOUT_YOU_Official_Video_-SJOKlqJho8U-128k-1655843172054_ygsji4.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
@@ -89,7 +89,7 @@ new Vue({
         {
           name: "Stay",
           artist: "Justin Bieber",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742202/portfolio/myMusic/music%20pics%20/kid_laroi_stay_gex8fo.png",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1666001261/portfolio/myMusic/music%20pics%20/kid_laroi_stay_szsm9y.jpg",
           source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742458/portfolio/myMusic/songs/Y2Mate.is_-_The_Kid_LAROI_Justin_Bieber_-_STAY_Official_Video_-kTJczUoc26U-128k-1655841551421_hzhbhv.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
@@ -116,7 +116,7 @@ new Vue({
         {
           name: "There for you",
           artist: "Martin Garrix",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742207/portfolio/myMusic/music%20pics%20/martin_garrix_there_for_you_v2y8sy.png",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1666001262/portfolio/myMusic/music%20pics%20/martin_garrix_there_for_you_fghtty.jpg",
           source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742397/portfolio/myMusic/songs/Y2Mate.is_-_Martin_Garrix_Troye_Sivan_-_There_For_You_Official_Video_-pNNMr5glICM-128k-1655843949003_v4pqst.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
@@ -134,7 +134,7 @@ new Vue({
         {
           name: "Silence",
           artist: "Marshmello",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742207/portfolio/myMusic/music%20pics%20/marshmello_silence_e9lzlb.png",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1666001262/portfolio/myMusic/music%20pics%20/marshmello_silence_bi1q3d.jpg",
           source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742371/portfolio/myMusic/songs/Y2Mate.is_-_Marshmello_ft._Khalid_-_Silence_Official_Lyric_Video_-tk36ovCMsU8-160k-1655807947955_t9xtz1.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
@@ -172,7 +172,7 @@ new Vue({
         {
           name: "Without me",
           artist: "Hasley",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742198/portfolio/myMusic/music%20pics%20/halsey_without_me_d5lczt.png",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1666001261/portfolio/myMusic/music%20pics%20/halsey_without_me_yscfyo.jpg",
           source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742295/portfolio/myMusic/songs/Y2Mate.is_-_Halsey_-_Without_Me-ZAfAud_M_mg-128k-1655840702713_nguiua.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
@@ -191,7 +191,7 @@ new Vue({
         {
           name: "Ilahi",
           artist: "Pritam",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742209/portfolio/myMusic/music%20pics%20/pritam_illahi_eyl8uh.png",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1666001262/portfolio/myMusic/music%20pics%20/pritam_illahi_aluqez.jpg",
           source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742148/portfolio/myMusic/songs/Y2Mate.is_-_Ilahi_Full_Video_Song_Yeh_Jawaani_Hai_Deewani_Ranbir_Kapoor_Deepika_Padukone_Pritam-fdubeMFwuGs-160k-1655776498421_njuntz.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
@@ -200,7 +200,7 @@ new Vue({
         {
           name: "Somebody that I used to know",
           artist: "Gotye",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742197/portfolio/myMusic/music%20pics%20/gotye_somebody_that_i_used_to_know_au9rms.png",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1666001261/portfolio/myMusic/music%20pics%20/gotye_somebody_that_i_used_to_know_rqgwkk.jpg",
           source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742121/portfolio/myMusic/songs/Y2Mate.is_-_Gotye_-_Somebody_That_I_Used_To_Know_feat._Kimbra_Official_Music_Video_-8UVNT4wvIGY-128k-1655844273458_v6u9pa.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
@@ -209,7 +209,7 @@ new Vue({
         {
           name: "The Nights",
           artist: "Avicii",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742197/portfolio/myMusic/music%20pics%20/avicii_the_night_lwqqb6.png",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1666001261/portfolio/myMusic/music%20pics%20/avicii_the_night_mdc4zz.jpg",
           source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742109/portfolio/myMusic/songs/Y2Mate.is_-_Avicii_-_The_Nights-UtF6Jej8yb4-128k-1655844024084_bcxfq5.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
@@ -227,7 +227,7 @@ new Vue({
         {
           name: "Blah Blah Blah",
           artist: "Armin van Buuren",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742189/portfolio/myMusic/music%20pics%20/armin_van_buuren_blah_blah_blah_qnhsp6.png",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1666001261/portfolio/myMusic/music%20pics%20/armin_van_buuren_blah_blah_blah_wn6yht.jpg",
           source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742085/portfolio/myMusic/songs/Y2Mate.is_-_Armin_van_Buuren_-_Blah_Blah_Blah_Official_Lyric_Video_-mfJhMfOPWdE-128k-1655715822119_eej3tq.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
