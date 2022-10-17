@@ -143,12 +143,12 @@ app.get("*",(req,res)=>{
 if(cluster.isMaster){
     console.log("Master started with Pid of master: "+process.pid)
     const num_of_cpus= os.cpus().length
-    // for(let i=0;i<num_of_cpus;i++){
-    //   cluster.fork();
-    // }
-    for(let i=0;i<1;i++){
-        cluster.fork();
-      }
+    for(let i=0;i<num_of_cpus;i++){
+      cluster.fork();
+    }
+    // for(let i=0;i<1;i++){
+    //     cluster.fork();
+    //   }
   }else{
     console.log("worker started with pid: "+process.pid);
     app.listen(PORT,()=>{
