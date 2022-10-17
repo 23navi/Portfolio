@@ -104,7 +104,11 @@ app.get("/",(req,res)=>{
 
 app.get('/mysongs', (req, res) => {
     res.sendFile(`${publicDirectoryPath}/musicPlayer/index.html`);
-  });
+});
+
+app.get('/resume', (req, res) => {
+res.sendFile(`${publicDirectoryPath}/resume/index.html`);
+});
 
 
 
