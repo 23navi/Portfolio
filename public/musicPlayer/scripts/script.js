@@ -196,55 +196,55 @@ new Vue({
         },
 
         {
-          name: "I'm Lonely",
-          artist: " Lauv",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742205/portfolio/myMusic/music%20pics%20/lonely_lauv_vp3frd.png",
-          source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742329/portfolio/myMusic/songs/Y2Mate.is_-_Lauv_-_i_m_lonely_with_Anne-Marie_Official_Video_-_cmORZMgv6I-128k-1655847860886_uxqjeu.mp3",
+          name: "Somebody that I used to know",
+          artist: "Gotye",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742197/portfolio/myMusic/music%20pics%20/gotye_somebody_that_i_used_to_know_au9rms.png",
+          source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742121/portfolio/myMusic/songs/Y2Mate.is_-_Gotye_-_Somebody_That_I_Used_To_Know_feat._Kimbra_Official_Music_Video_-8UVNT4wvIGY-128k-1655844273458_v6u9pa.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
         },
 
         {
-          name: "I'm Lonely",
-          artist: " Lauv",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742205/portfolio/myMusic/music%20pics%20/lonely_lauv_vp3frd.png",
-          source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742329/portfolio/myMusic/songs/Y2Mate.is_-_Lauv_-_i_m_lonely_with_Anne-Marie_Official_Video_-_cmORZMgv6I-128k-1655847860886_uxqjeu.mp3",
+          name: "The Nights",
+          artist: "Avicii",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742197/portfolio/myMusic/music%20pics%20/avicii_the_night_lwqqb6.png",
+          source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742109/portfolio/myMusic/songs/Y2Mate.is_-_Avicii_-_The_Nights-UtF6Jej8yb4-128k-1655844024084_bcxfq5.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
         },
 
         {
-          name: "I'm Lonely",
-          artist: " Lauv",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742205/portfolio/myMusic/music%20pics%20/lonely_lauv_vp3frd.png",
-          source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742329/portfolio/myMusic/songs/Y2Mate.is_-_Lauv_-_i_m_lonely_with_Anne-Marie_Official_Video_-_cmORZMgv6I-128k-1655847860886_uxqjeu.mp3",
+          name: "Pasoori",
+          artist: "Ali sethi",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742218/portfolio/myMusic/music%20pics%20/ali_sethi_pasoori_ivs6on.png",
+          source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742108/portfolio/myMusic/songs/Y2Mate.is_-_Coke_Studio_Season_14_Pasoori_Ali_Sethi_x_Shae_Gill-5Eqb_-j3FDA-128k-1654117058071-_AudioTrimmer.com_z41twv.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
         },
 
         {
-          name: "I'm Lonely",
-          artist: " Lauv",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742205/portfolio/myMusic/music%20pics%20/lonely_lauv_vp3frd.png",
-          source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742329/portfolio/myMusic/songs/Y2Mate.is_-_Lauv_-_i_m_lonely_with_Anne-Marie_Official_Video_-_cmORZMgv6I-128k-1655847860886_uxqjeu.mp3",
+          name: "Blah Blah Blah",
+          artist: "Armin van Buuren",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742189/portfolio/myMusic/music%20pics%20/armin_van_buuren_blah_blah_blah_qnhsp6.png",
+          source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742085/portfolio/myMusic/songs/Y2Mate.is_-_Armin_van_Buuren_-_Blah_Blah_Blah_Official_Lyric_Video_-mfJhMfOPWdE-128k-1655715822119_eej3tq.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
         },
 
         {
-          name: "I'm Lonely",
-          artist: " Lauv",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742205/portfolio/myMusic/music%20pics%20/lonely_lauv_vp3frd.png",
-          source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742329/portfolio/myMusic/songs/Y2Mate.is_-_Lauv_-_i_m_lonely_with_Anne-Marie_Official_Video_-_cmORZMgv6I-128k-1655847860886_uxqjeu.mp3",
+          name: "Call you mine",
+          artist: "The Chainsmokers",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742214/portfolio/myMusic/music%20pics%20/the_chainsmokers_call_you_mine_fnmg7g.png",
+          source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665999381/portfolio/myMusic/songs/y2mate.com_-_The_Chainsmokers_Call_You_Mine_Official_Video_ft_Bebe_Rexha_u46vdv.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
         },
 
         {
-          name: "I'm Lonely",
-          artist: " Lauv",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742205/portfolio/myMusic/music%20pics%20/lonely_lauv_vp3frd.png",
-          source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742329/portfolio/myMusic/songs/Y2Mate.is_-_Lauv_-_i_m_lonely_with_Anne-Marie_Official_Video_-_cmORZMgv6I-128k-1655847860886_uxqjeu.mp3",
+          name: "About love",
+          artist: "Netflix album",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742214/portfolio/myMusic/music%20pics%20/to_all_the_boys-_about_love_ewz7ep.png",
+          source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742084/portfolio/myMusic/songs/Y2Mate.is_-_About_Love_From_The_Netflix_Film_To_All_The_Boys_P.S._I_Still_Love_You_-2lDhPjksqLQ-128k-1655840782409_lx7ltg.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
         },
