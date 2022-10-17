@@ -53,6 +53,7 @@ router.get("/allProjects",(async (req,res)=>{
     let isSearch=false;
     let skip=req.query.skip || 0;
     let limit=req.query.limit || 5;
+    const projectCount=await Project.find({}).count();
     const projects= await Project.find({}).limit(limit).skip(skip);
     if(req.session.user){
         res.locals.currentUser=req.session.user;
@@ -61,7 +62,7 @@ router.get("/allProjects",(async (req,res)=>{
         res.locals.currentUser=null;
     }
     
-    res.render("project/allProject",{projects,limit,skip,isSearch});
+    res.render("project/allProject",{projects,limit,skip,isSearch,projectCount});
 }))
 
 
