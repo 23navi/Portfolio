@@ -125,9 +125,11 @@ app.get("/resume",(req,res)=>{
 
 
 
-app.get("/moreAboutMe",(req,res)=>{
+app.get("/about",(req,res)=>{
     res.render("comingSoon",{title:"About me"});
 })
+
+
 
 //render the snake game project ... move to project route
 app.get("/snake",(req,res)=>{
