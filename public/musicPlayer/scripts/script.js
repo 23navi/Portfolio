@@ -1,3 +1,5 @@
+let ran= Math.floor(Math.random()*20);
+
 new Vue({
   el: "#app",
   data() {
@@ -249,8 +251,9 @@ new Vue({
           favorited: false
         },
       ],
+
       currentTrack: null,
-      currentTrackIndex: 0,
+      currentTrackIndex: ran,
       transitionName: null
     };
   },
@@ -380,7 +383,7 @@ new Vue({
   
   created() {
     let vm = this;
-    this.currentTrack = this.tracks[0];
+    this.currentTrack = this.tracks[ran];
     this.audio = new Audio();
     this.audio.src = this.currentTrack.source;
     this.audio.ontimeupdate = function() {
@@ -395,13 +398,13 @@ new Vue({
     };
 
     // this is optional (for preload covers)
-    for (let index = 0; index < this.tracks.length; index++) {
-      const element = this.tracks[index];
-      let link = document.createElement('link');
-      link.rel = "prefetch";
-      link.href = element.cover;
-      link.as = "image"
-      document.head.appendChild(link)
-    }
+    // for (let index = 0; index < this.tracks.length; index++) {
+    //   const element = this.tracks[index];
+    //   let link = document.createElement('link');
+    //   link.rel = "prefetch";
+    //   link.href = element.cover;
+    //   link.as = "image"
+    //   document.head.appendChild(link)
+    // }
   }
 });
