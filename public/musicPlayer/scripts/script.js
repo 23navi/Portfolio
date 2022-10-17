@@ -26,7 +26,7 @@ new Vue({
         {
           name: "Duniya ",
           artist: "Akhil",
-          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1665742194/portfolio/myMusic/music%20pics%20/akhil_duniya_augg9e.png",
+          cover: "https://res.cloudinary.com/drfaohzpo/image/upload/v1666000117/portfolio/myMusic/music%20pics%20/akhil_duniya_uho1ip.jpg",
           source: "https://res.cloudinary.com/drfaohzpo/video/upload/v1665742343/portfolio/myMusic/songs/Y2Mate.is_-_Luka_Chuppi_Duniyaa_Full_Video_Song_Kartik_Aaryan_Kriti_Sanon_Akhil_Dhvani_B-hVCYwwFwGEE-128k-1655844323955_tns5vk.mp3",
           url: "https://youtu.be/BcqxLCWn-CE",
           favorited: false
