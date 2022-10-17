@@ -58,27 +58,18 @@
 
 
 
+<!-- Dynamic pagination -->
 
 <%if(!isSearch){%>
     <nav aria-label="...">
-
         <ul class="pagination pagination-lg justify-content-center">
-    
-    
-            <li class="page-item first  <%=skip==0&&limit==5?"disabled":"byeee"%> ">
-                <a class="page-link first" href="/allProjects">1</a>
-            </li>
-    
-            <li class="page-item second <%=skip==5&&limit==5?"disabled":"byeee"%>">
-                <a class="page-link" href="/allProjects?limit=5&skip=5">2</a>
-            </li>
-    
-            <li class="page-item third <%=skip==10&&limit==5?"disabled":"byeee"%>">
-                <a class="page-link third" href="/allProjects?limit=5&skip=10">3</a>
-            </li>
+            <%let skipVal=0%>
+            <% for(let i=0;i<Math.ceil(projectCount/limit);i++){ %>
+                <li class="page-item <%=skip==skipVal?"disabled":""%> ">
+                    <a class="page-link" href="/allProjects?skip=<%=skipVal%>"><%=i+1%></a>
+                </li>
+                <%skipVal+=limit%>
+            <%} %>
         </ul>
-    
       </nav>
-
-
 <%}%>
