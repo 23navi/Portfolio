@@ -17,7 +17,7 @@ html{
 .navBar {
     z-index: 2;
     display: grid;
-    grid-template-columns: [start] 1.5fr [logo-end] 2.5fr [menu-start] 2fr [menu-end] 3fr [social-start] 1fr [social-end];
+    /* grid-template-columns: [start] 1.5fr [logo-end] 2.5fr [menu-start] 2fr [menu-end] 3fr [social-start] 1fr [social-end]; */
     grid-template-rows: 60px;
     padding: 1em;
     color: white;
@@ -220,3 +220,14 @@ a:hover{
 
 
 }
+
+
+
+
+@keyframes projectHeader {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
