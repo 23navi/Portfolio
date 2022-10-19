@@ -16,9 +16,10 @@ const projectSchema = new mongoose.Schema({
     projectStart:String,
     projectEnd:String,
     ongoing:Boolean,
-    hasLiveLink:Boolean,
+    hasLiveLink:{type:Boolean, default:false},
     liveLink:String,
-    hasGithub:Boolean,
+    hasGithub:{type:Boolean, default:false},
+    githubLink:String,
     tags:[String]
 
 })
