@@ -210,6 +210,22 @@ router.post("/projects",isNavi,imgUpl.array("img"),async (req,res)=>{
     const imgArr= req.files.map(f=>({url:f.path,filename:f.filename}));
     const project = new Project(req.body.project);
     project.images=imgArr;
+
+
+    if(!req.body.project.liveLink) {
+        project.hasLiveLink=false;
+    }else{
+        project.hasLiveLink=true;
+    }
+
+    if(!req.body.project.githubLink) {
+        project.hasGithub=false;
+    }else{
+        project.hasGithub=true;
+    }
+
+
+
     await project.save();
     req.flash("success","Successfully created a new project");
     res.status(200).redirect(`/projects/${project.name}`);
@@ -237,9 +253,9 @@ router.delete("/projects/:name",isNavi,async (req,res)=>{
         cloudinary.uploader.destroy(image.filename);
     }
 
-    req.flash("success","Successfully deleted the stay");
+    req.flash("success","Successfully deleted the project");
     console.log("deleted");
-    res.redirect("/projects");
+    res.redirect("/allProjects");
 });
 
 
@@ -260,33 +276,28 @@ router.put("/projects/:name",isNavi,imgUpl.array('img'),async (req,res)=>{
         }
     }
     
+  
+    console.log(req.body);
+    if(!req.body.project.liveLink) {
+        project.hasLiveLink=false;
+    }else{
+        project.hasLiveLink=true;
+    }
+
+    if(!req.body.project.githubLink) {
+        project.hasGithub=false;
+    }else{
+        project.hasGithub=true;
+    }
+
+
+
+
     await project.save()
 
-    req.flash("success","Successfully updated the stay");
+    req.flash("success","Successfully updated the project");
     res.status(200).redirect(`/projects/${project.name}`);
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -154,7 +154,7 @@ if(cluster.isMaster){
     }
     // for(let i=0;i<1;i++){
     //     cluster.fork();
-    //   }
+    // }
   }else{
     console.log("worker started with pid: "+process.pid);
     app.listen(PORT,()=>{
