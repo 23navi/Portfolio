@@ -73,7 +73,7 @@ router.get("/allProjects",(async (req,res)=>{
     let skip=req.query.skip || 0;
     let limit=req.query.limit || 5;
     const projectCount=await Project.find({}).count();
-    const projects= await Project.find({}).limit(limit).skip(skip);
+    const projects= await Project.find({}).sort({position:1}).limit(limit).skip(skip);
     if(req.session.user){
         res.locals.currentUser=req.session.user;
         
@@ -267,7 +267,7 @@ router.put("/projects/:name",isNavi,imgUpl.array('img'),async (req,res)=>{
     project.images.push(...images);
 
     if(req.body.deleteImages){
-        await Project.updateOne({$pull:{images:{filename:{$in: req.body.deleteImages}}}},{new: true})
+        await project.updateOne({$pull:{images:{filename:{$in: req.body.deleteImages}}}},{new: true})
         for(let filename of req.body.deleteImages){
             cloudinary.uploader.destroy(filename)
         }
@@ -276,8 +276,8 @@ router.put("/projects/:name",isNavi,imgUpl.array('img'),async (req,res)=>{
         }
     }
     
-  
-    console.log(req.body);
+
+
     if(!req.body.project.liveLink) {
         project.hasLiveLink=false;
     }else{

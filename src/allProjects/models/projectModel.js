@@ -6,7 +6,7 @@ const projectSchema = new mongoose.Schema({
 
     name:{type:String},
     title:{type:String},
-    images:[{url:String}],
+    images:[{url:String,filename:String}],
     descriptionBasic:{type:String},
     descriptionMain:{type:String},
     reviews: [{
@@ -19,7 +19,8 @@ const projectSchema = new mongoose.Schema({
     liveLink:String,
     hasGithub:{type:Boolean, default:false},
     githubLink:String,
-    tags:[String]
+    tags:[String],
+    position:Number,
 
 })
 
