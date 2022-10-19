@@ -1,49 +1,115 @@
 <% layout('layouts/project/boilerplate')%>
 <div class="row">
-    <h1 class="text-center">New stay</h1>
+    <h1 class="text-center">Welcome Navi...</h1>
+    <h1 class="text-center">Add new project</h1>
     <div class="col-6 offset-3">
         <form action="/projects" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+
+            <!-- main title of the project -->
             <div class="mb-3">
-                <label class="form-label" for="title">Title</label>
+                <label class="form-label" for="title">Title for the project</label>
                 <input class="form-control" type="text" id="title" name="project[title]" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
             </div>
+
+            <!-- Unique name to project -->
             <div class="mb-3">
-                <label class="form-label" for="location">Name</label>
-                <input class="form-control" type="text" id="location" name="project[name]" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="img">Image Upload</label>
-                <input class="form-control" type="file" id="img" name="img" required multiple>
-            </div>
-            
-            <div class="mb-3">
-                <label class="form-label" for="price">stay Price</label>
-                <div class="input-group">
-                    <span class="input-group-text" id="price-label">$</span>
-                    <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
-                        aria-describedby="price-label" name="project[price]" required>
-                </div>
+                <label class="form-label" for="name">Unique name for the project</label>
+                <input class="form-control" type="text" id="name" name="project[name]" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
             </div>
 
+            <!-- images array -->
             <div class="mb-3">
-                <label class="form-label" for="description">Description</label>
-                <textarea class="form-control" type="text" id="description" name="project[descriptionBasic]"
+                <label class="form-label" for="img">Image Upload</label>
+                <input class="form-control" type="file" id="img" name="img" required multiple>
+            </div>
+            
+
+
+            <div class="mb-3">
+                <label class="form-label" for="descriptionMain">Description main</label>
+                <textarea class="form-control" type="text" id="descriptionMain" name="project[descriptionMain]"
                     required></textarea>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
             </div>
+
+
+
             <div class="mb-3">
-                <button class="btn btn-success">Add stay</button>
+                <label class="form-label" for="descriptionBasic">Description basic</label>
+                <textarea class="form-control" type="text" id="descriptionBasic" name="project[descriptionBasic]"
+                    required></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+
+
+            <!-- github link -->
+            <div class="mb-3">
+                <label class="form-label" for="github">github link</label>
+                <input class="form-control" type="text" id="github" name="project[github]"
+                    required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+
+            <!-- live demo link -->
+            <div class="mb-3">
+                <label class="form-label" for="live">live demo link</label>
+                <input class="form-control" type="text" id="live" name="project[live]"
+                    required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+
+            <!-- tags for the project -->
+            <div class="mb-3">
+                <label class="form-label" for="tags">Tags (Seperated by ,)</label>
+                <textarea class="form-control" type="text" id="tags" name="project[tags]"></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+
+
+            <!-- project start date -->
+            <div class="mb-3">
+                <label class="form-label" for="start">Start Date (DD/MM/YYYY format)</label>
+                <input class="form-control" type="text" id="start" name="project[start]"
+                    required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+
+            <!-- project end date -->
+            <div class="mb-3">
+                <label class="form-label" for="end">End Date (enter 0 if ongoing)</label>
+                <input class="form-control" type="text" id="end" name="project[end]"
+                    required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+
+            <div class="mb-3">
+                <button class="btn btn-success">Add project</button>
             </div>
         </form>
     </div>
