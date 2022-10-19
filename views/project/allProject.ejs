@@ -34,21 +34,11 @@
             <div class="card-body">
                 <h5 class="card-title"><%= project.title %> </h5>
                 <p class="card-text"><%= project.descriptionBasic %></p>
-                <p class="card-text"><%= project.descriptionMain %></p>
-                <p class="card-text"><%= project.projectStart %></p>
-                <p class="card-text"><%= project.projectEnd%></p>
-                <p class="card-text">
-                    <small class="text-muted"><%= project.name%></small>
-                </p>
-                 
                 <a class="btn btn-primary" href="/projects/<%=project.name%>">View <%=project.title%></a>
             </div>
-            <div class="date">
-                <%for(let tag of project.tags){%>
-                    <span><%= tag%></span>
-                <%}%>
-                
-            </div>
+
+            
+            
         </div>
     </div>
 </div>

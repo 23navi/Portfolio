@@ -12,6 +12,10 @@
 
 
 
+
+
+
+
 <div class="row">
 
 
@@ -23,12 +27,9 @@
 
               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
-
                     <% for(let i=0;i<project.images.length;i++) {%>
                         <li data-target="#carouselExampleIndicators" data-slide-to="<%=i%>" class="<%= i==0?'active':''%>"></li>
                     <%} %>
-
-
                 </ol>
                 <div class="carousel-inner">
 
@@ -63,9 +64,21 @@
                 <h5 class="card-title"><%= project.title%></h5>
                 <p class="card-text"><%= project.descriptionMain%></p>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item text-muted"><%= project.name%></li>
-            </ul>
+           
+
+            <div class="card-body">
+                <%  if(project.hasLiveLink)  {%>
+                    <a class="card-link btn btn-info" href="<%=project.liveLink%>">Live Demo</a>
+                <% } %>
+
+                <%  if(project.hasGithub)  {%>
+                    <a class="card-link btn btn-info" href="<%=githubLink%>">Github</a>
+                <% } %>
+                
+            </div>
+
+           
+
 
            
 
@@ -73,7 +86,7 @@
 
 
             <div class="card-footer text-muted">
-                2 days ago
+                <%= project.projectStart%> - <%= project.projectEnd%>
             </div>
 
 
@@ -113,10 +126,11 @@
         <% for(let review of project.reviews) { %>
             <div class="card mb-3 ">
                 <div class="card-body">
-                    <h5 class="card-title"> @<%= review.author.username%></h5>
+                    <h4> @<%= review.author.username%></h4>
                     
-                    <!-- <h6 class="card-subtitle mb-2 text-muted">By <%= review.author.username%></h6> -->
-                    <p class="card-text">Review: <%= review.body %></p>
+                    
+                    <h5 >Review: <%= review.body %></h5>
+
                     <%  if( currentUser && review.author.equals(currentUser._id))  {%>
                         <div class="card-body">
                             
