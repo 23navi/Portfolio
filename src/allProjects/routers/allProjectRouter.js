@@ -1,5 +1,13 @@
 //const catchAsync=require("../../utils/errors/catchAsync");
 
+const {cloudinary,storage}= require("../utils/cloudinary/index")
+
+
+const multer= require("multer");
+
+const imgUpl= multer({storage});
+
+
 const validateUserLoginJoiSchema=require("../utils/JoiSchema/validateUserLoginJoiSchema");
 const validateUserRegisterJoiSchema=require("../utils/JoiSchema/validateUserRegisterJoiSchema");
 
@@ -7,12 +15,22 @@ const validateUserRegisterJoiSchema=require("../utils/JoiSchema/validateUserRegi
 const Project= require("../models/projectModel.js")
 const User= require("../models/userModel.js")
 
-const {isLoggedIn}= require("../middlewares/login.js")
+// const {isLoggedIn}= require("../middlewares/login.js")
 
+const {isNavi}= require("../middlewares/isNavi.js")
 
 const express= require("express")
 
 const router= express.Router();
+
+
+router.get("/projects/new",isNavi,(req,res)=>{
+    if(req.session.user) res.locals.currentUser=req.session.user;
+    else res.locals.currentUser=null;
+
+    res.status(200).render("project/new.ejs");
+}
+);
 
 
 
@@ -31,6 +49,7 @@ router.get("/projects/:name",async (req,res)=>{
     if(project){
         if(req.session.user) res.locals.currentUser=req.session.user;
         else res.locals.currentUser=null;
+        res.locals.isNavi= res.locals.currentUser &&( res.locals.currentUser.username=="Navi" || res.locals.currentUser.username=="navi")? true:false;
         res.status(200).render("project/singleProject.ejs",{project})
     }else{
         req.flash("error","No such campground exist");
@@ -177,6 +196,98 @@ router.get("/verify",(req,res)=>{
 router.get("/forgot",(req,res)=>{
     res.render("comingSoon",{title:"Forgot password"});
 })
+
+
+
+
+
+
+
+// just for meee
+
+
+router.post("/projects",isNavi,imgUpl.array("img"),async (req,res)=>{
+    const imgArr= req.files.map(f=>({url:f.path,filename:f.filename}));
+    const project = new Project(req.body.project);
+    project.images=imgArr;
+    await project.save();
+    req.flash("success","Successfully created a new project");
+    res.status(200).redirect(`/projects/${project.name}`);
+})
+
+
+
+
+
+
+router.get("/projects/:name/edit",isNavi,async (req,res)=>{
+    const project= await Project.findOne({name:req.params.name});
+    // res.send("edit......")
+    if(req.session.user) res.locals.currentUser=req.session.user;
+    else res.locals.currentUser=null;
+    res.status(200).render("project/edit.ejs",{project})
+})
+
+
+
+router.delete("/projects/:name",isNavi,async (req,res)=>{
+    const project =await Project.findOne({name:req.params.name});
+
+    for(let image of project.images){
+        cloudinary.uploader.destroy(image.filename);
+    }
+
+    req.flash("success","Successfully deleted the stay");
+    console.log("deleted");
+    res.redirect("/projects");
+});
+
+
+
+
+router.put("/projects/:name",isNavi,imgUpl.array('img'),async (req,res)=>{
+    let project=await Project.findOneAndUpdate({name:req.params.name},{ ...req.body.project });
+    const images=req.files.map(f=>({url:f.path,filename:f.filename}));
+    project.images.push(...images);
+
+    if(req.body.deleteImages){
+        await Project.updateOne({$pull:{images:{filename:{$in: req.body.deleteImages}}}},{new: true})
+        for(let filename of req.body.deleteImages){
+            cloudinary.uploader.destroy(filename)
+        }
+        if(project.images.length==req.body.deleteImages){
+            console.log("heyhyy");
+        }
+    }
+    
+    await project.save()
+
+    req.flash("success","Successfully updated the stay");
+    res.status(200).redirect(`/projects/${project.name}`);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 module.exports=router;

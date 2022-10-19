@@ -1,0 +1,50 @@
+<% layout('layouts/project/boilerplate')%>
+<div class="row">
+    <h1 class="text-center">New stay</h1>
+    <div class="col-6 offset-3">
+        <form action="/projects" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="project[title]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Name</label>
+                <input class="form-control" type="text" id="location" name="project[name]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="img">Image Upload</label>
+                <input class="form-control" type="file" id="img" name="img" required multiple>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label" for="price">stay Price</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">$</span>
+                    <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
+                        aria-describedby="price-label" name="project[price]" required>
+                </div>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="project[descriptionBasic]"
+                    required></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success">Add stay</button>
+            </div>
+        </form>
+    </div>
+</div>

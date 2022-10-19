@@ -66,9 +66,28 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item text-muted"><%= project.name%></li>
             </ul>
+
+           
+
+
+
+
             <div class="card-footer text-muted">
                 2 days ago
             </div>
+
+
+
+
+            <%  if(isNavi)  {%>
+                <div class="card-body">
+                    <a class="card-link btn btn-info" href="/projects/<%=project.name%>/edit">Edit</a>
+                    <form class="d-inline" action="/projects/<%=project.name%>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            <% } %>
+            
         </div>
 
     </div>

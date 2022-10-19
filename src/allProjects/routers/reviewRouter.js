@@ -26,21 +26,17 @@ router.delete("/projects/:name/reviews/:revId",isLoggedIn,isReviewAuthorized,(as
     //Campground.findByIdAndUpdate(id,{$pull:{reviews:revId}});  // remove the value provided from the array
     //Review.findByIdAndDelete(reviewId)
 
-    console.log("remove request: ",req.params.revId)
-    console.log("remove request review selected: ",review)
-    console.log("before removing: ",project.reviews)
 
     project.reviews=project.reviews.filter((arrReview)=>{
         return arrReview.toString()!==review._id.toString()
     })
 
-    console.log("After removing: ",project.reviews);
+    
     
     await project.save()
     //r1= await Review.deleteOne({"id":review.id})
     const r2= await Review.findOneAndDelete({"_id":review._id}) //note deleteOne do not trigger a middleware so we need to use findOneAndDelete
-    
-    console.log("Deleted review: ",r2._id);
+
 
     req.flash("success","Successfully deleted the review");
     res.redirect("/projects/"+project.name);
@@ -57,7 +53,6 @@ router.post("/projects/:name/reviews",isLoggedIn, validateUserRegisterJoiSchema,
     project.reviews.push(review)
     await project.save();
     await review.save();
-    console.log("List of reviews when new rev is created: ")
     req.flash("success","Successfully created a new review");
     res.redirect("/projects/"+req.params.name);
 })
