@@ -247,7 +247,7 @@ router.get("/projects/:name/edit",isNavi,async (req,res)=>{
 
 
 router.delete("/projects/:name",isNavi,async (req,res)=>{
-    const project =await Project.findOne({name:req.params.name});
+    const project =await Project.findOneAndDelete({name:req.params.name});
 
     for(let image of project.images){
         cloudinary.uploader.destroy(image.filename);
