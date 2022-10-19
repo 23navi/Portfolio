@@ -1,0 +1,77 @@
+<% layout('layouts/project/boilerplate')%>
+<div class="row">
+    <h1 class="text-center">Edit project</h1>
+    <div class="col-6 offset-3">
+        <form action="/projects/<%=project.name%>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="project[title]"
+                    value="<%=project.title %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="location">Name</label>
+                <input class="form-control" type="text" id="location" name="project[name]"
+                    value="<%=project.name %>" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            
+
+            <div class="mb-3">
+                <label class="form-label" for="img">Upload more image(s)</label>
+                <input class="form-control" type="file" id="img" name="img" multiple>
+            </div>
+
+
+
+            <div class="mb-3">
+                <label class="form-label" for="price">project Price</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">$</span>
+                    <input type="text" class="form-control" id="price" aria-label="price"
+                        aria-describedby="price-label" name="project[price]" value="<%=project.price %>"
+                        required><div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="project[descriptionBasic]"
+                    required><%= project.descriptionBasic%></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+
+
+            <div class="mb-3">
+                <% project.images.forEach(function(img, i) {  %>
+
+                <img src="<%=img.url%>" class="img-thumbnail" alt="">
+                <div class="form-check-inline">
+                    <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%=img.filename%>">
+                </div>
+                <label for="image-<%=i%>">Delete?</label>
+                <% })%>
+            </div>
+
+
+
+
+
+            <div class="mb-3">
+                <button class="btn btn-info">Update project</button>
+            </div>
+        </form>
+        <a href="/projects/<%= project.name%>">Back To project</a>
+
+    </div>
+</div>
