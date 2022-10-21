@@ -130,7 +130,7 @@ app.get("/resume",(req,res)=>{
 
 
 app.get("/about",(req,res)=>{
-    res.render("comingSoon",{title:"About me"});
+    res.render("about");
 })
 
 
